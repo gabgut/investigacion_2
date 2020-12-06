@@ -1,7 +1,6 @@
 import socket
 import pickle
 from twh import ThreeWayHandshake
-# from gc import enable
 from time import sleep
 SERVER_ADDRES = "127.0.0.1"
 SERVER_PORT = 5000
@@ -11,7 +10,6 @@ def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     address = (SERVER_ADDRES, SERVER_PORT)
     conn1 = ThreeWayHandshake()
-    # print("before", conn1)
     sock.connect(address)
     conn1.Connection()
     while conn1.connected != True:

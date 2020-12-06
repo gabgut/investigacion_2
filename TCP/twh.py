@@ -12,17 +12,17 @@ class ThreeWayHandshake:
 
     def Connection(self):
         if self.status == None:
-            print "starting 3-way handshake", "status: sync"
+            print "Empezando el protocolo de 3-way handshake", "estado: sync"
             self.status = "sync"
         elif self.status == "sync":
-            print "sync received", "status: ack-sync"
+            print "sync recibido", "estado: ack-sync"
             self.status = "ack-sync"
         elif self.status == "ack-sync":
-            print "ack-sync received", "status: ack"
+            print "ack-sync recibido", "estado: ack"
             self.status = "ack"
         elif self.status == "ack":
             self.connected = True
-            print "connected.", "ready to received data."
+            print "Conectado.", "Listo para recibir datos"
 
     def IsConnected(self):
         return self.connected
@@ -32,4 +32,4 @@ class ThreeWayHandshake:
         self.connected = False
 
     def __str__(self):
-        return "status: {self.status}, connection established: {self.connected}."
+        return "Estadi: {self.status}, conexion establecida: {self.connected}."
