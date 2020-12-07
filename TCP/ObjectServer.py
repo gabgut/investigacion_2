@@ -12,6 +12,25 @@ from time import sleep
 
 class Server():
 
+    """
+    Esta clase se utiliza para implementar el servidor de sockets para establecer una comunicacion
+    mediante el protocolo TCP
+
+    Atributos:
+    ---------
+    hanler: Objeto de la clase socket
+        Crea el socket.
+    address: Python tuple
+        Tupla que contiene la direcciones del servidor y su puerto.
+
+    Metodos:
+    -------
+    __init__:
+        Constructor de la clase.
+    start_protocol:
+        Empieza la conexion.
+    """
+
     def __init__(self):
         self.hanler = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.address = (SERVER_ADDRESS, SERVER_PORT)
@@ -34,6 +53,7 @@ class Server():
             connection = obj.IsConnected()
             data = con.recv(4096)
         print data
+        con.sendall("Esto es un mensaje del servidor al cliente")
         print "El three way handshake fue realizado con exito"
         con.close()
 

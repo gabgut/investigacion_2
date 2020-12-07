@@ -5,8 +5,29 @@
 
 class ThreeWayHandshake:
 
-    def __init__(self, twh=None):
+    """
+    Esta clase se utiliza para implementar el protocolo de Three Way Handshakes
 
+    Atributos:
+    ---------
+    status: Python String
+        String para almacenar el estado.
+    connected: Python tuple
+        Booleano para ver si la conexion se establece.
+
+    Metodos:
+    -------
+    __init__:
+        Constructor de la clase.
+    Connection:
+        Empieza la conexion.
+    IsConnected:
+        Retorna el estado de la conexion.
+    Reset:
+        Reinicia los atributos de la clase.  
+    """
+
+    def __init__(self, twh=None):
         self.status = None
         self.connected = False
 
