@@ -10,5 +10,8 @@ en el momento de la ejecución. Para esto sólo cambie la dirección en la const
 correspondiente o espere un tiempo aletorio para volver a intentarlo y ver si la dirección
 se desocupó.
 
-#### Compilar el programa
-    $ make iverilog
+#### Ejecutar el servidor
+    $ python ObjectServer.py
+
+#### Ejecutar el cliente
+    $ python ObjectClient.py
